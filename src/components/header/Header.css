@@ -1,0 +1,20 @@
+
+
+.header{
+    width: 100%;
+    min-height: 300px;
+    float: left;
+    
+}
+
+.colorG{
+    background: green;
+}
+
+.colorB{
+    background: blue;
+}
+
+.color{
+    background: red;
+}
