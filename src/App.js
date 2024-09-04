@@ -1,7 +1,7 @@
-
-
 import './App.css';
-import Header from './components/header/Header';
+import Item from './components/item/Item';
+// import Menu from './components/Menu/Menu';
+
 
 
 
@@ -12,7 +12,9 @@ import Header from './components/header/Header';
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Menu/> */}
+      <Item name="Fraz" surname="Ahmad" age="21" email="fraz@gmail.com" />
+      <Item name="Fizza" surname="Nayab" age="19" email="Fizza@gmail.com" />
     </div>
   );
 }

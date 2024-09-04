@@ -1,24 +1,20 @@
 import { Component } from "react";
 import './Header.css'
-import Logo from "./logo/Logo";
+
 
 class Header extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            number: 1,
+            number: 3,
             text: "Submit",
             background_color_style: "colorB",
             Status:"pending"
         }
     }
+ 
 
-
-
-
-
-    
     add_plus = () => {
         this.setState(
             (prev) => (
@@ -31,7 +27,6 @@ class Header extends Component {
             )
         )
     }
-
 
     remove_minus = () => {
         this.setState(
@@ -71,7 +66,7 @@ class Header extends Component {
                 <button onClick={this.add_plus}>Plus </button>
                 <button onClick={this.remove_minus}>Minus</button>
                 <button onClick={this.chBg}>Blue</button>
-                <Logo status={Status} />
+              
             </div>
         )
     }
