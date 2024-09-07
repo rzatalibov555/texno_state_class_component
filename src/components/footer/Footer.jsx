@@ -1,31 +1,34 @@
 import './Footer.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Hooks
 
 const Footer = () => {
+    
+    const [num, setNum] = useState(1)
+    const [name, setName] = useState("Fizza")
+    const [demo, setDemo] = useState("Good")
 
-  const [names, setNames] = useState(["Eshban", "Zara", "Fraz", "Fizza"]);
-  const [nameIndex, setNameIndex] = useState(0); // Track current index
+    useEffect(() => {
+        console.log("start useEffect 1")
+    },[name])
 
-  const nextName = () => {
-    setNameIndex((prevIndex) =>
-      prevIndex === names.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
-  const prevName = () => {
-    setNameIndex((prevIndex) =>
-      prevIndex === 0 ? names.length - 1 : prevIndex - 1
-    );
-  };
+    useEffect(() => {
+        console.log("start useEffect 2")
+    },[num])
+    // dependencies
+    
 
   return (
-    <div>
-      <h1>Current Name: {names[nameIndex]}</h1>
+    <div id='demo'>
+        <h1>{num}</h1>
+        <h1>{name}</h1>
+        <h1>{demo}</h1>
 
-      <button onClick={prevName}>Previous Name</button>
-      <button onClick={nextName}>Next Name</button>
+        <button onClick={()=>{setNum(num+1)}}>+</button>
+        <button onClick={()=>{setDemo("perfect")}}>from good to perfect</button>
+        <button onClick={()=>{setName("Fraz")}}>Change Name</button>
     </div>
   );
 };
